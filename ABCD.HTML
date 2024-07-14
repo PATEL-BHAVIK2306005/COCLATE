@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Heaven - About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0e6d2;
+            margin: 0;
+            padding: 20px;
+            color: #4a2c2a;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #4a2c2a;
+            text-align: center;
+        }
+        .branch-managers {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .manager {
+            width: 30%;
+            min-width: 200px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .manager img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        #history {
+            margin-top: 30px;
+            text-align: justify;
+        }
+        button {
+            background-color: #4a2c2a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 3px;
+            display: block;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: #3a1c1a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Chocolate Heaven</h1>
+        
+        <h2>Our Branch Managers</h2>
+        <div class="branch-managers">
+            <div class="manager">
+                <img src="https://placekitten.com/150/150" alt="Patel Bhavik">
+                <h3>Patel Bhavik</h3>
+                <p>Branch Manager</p>
+            </div>
+            <div class="manager">
+                <img src="https://placekitten.com/151/151" alt="Neel Shah">
+                <h3>Neel Shah</h3>
+                <p>Branch Manager</p>
+            </div>
+            <div class="manager">
+                <img src="https://placekitten.com/152/152" alt="Kush">
+                <h3>Kush</h3>
+                <p>Branch Manager</p>
+            </div>
+        </div>
+
+        <h2>Our History</h2>
+        <div id="history">
+            <p>Chocolate Heaven was founded in 2010 with a dream to bring the finest chocolates to chocolate lovers everywhere. What started as a small shop has now grown into a beloved chain with multiple branches across the country.</p>
+        </div>
+
+        <button id="showMoreHistory">Show More History</button>
+    </div>
+
+    <script>
+        document.getElementById('showMoreHistory').addEventListener('click', function() {
+            const historyDiv = document.getElementById('history');
+            const moreHistory = `
+                <p>In 2015, we expanded to our second location, managed by Patel Bhavik. The following year, Neel Shah joined our team to manage our third branch. In 2018, Kush came on board to lead our fourth location.</p>
+                <p>Today, Chocolate Heaven is known for its exquisite truffles, artisanal bars, and unique flavor combinations. We continue to innovate and delight our customers with new chocolate creations every season.</p>
+            `;
+            historyDiv.innerHTML += moreHistory;
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
